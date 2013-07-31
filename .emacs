@@ -6,15 +6,22 @@
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-(defvar my-packages '())
+(defvar my-packages '(zenburn
+                      goto-last-change
+                      expand-region
+                      smex
+                      nrepl
+                      clojure-mode))
 
-(dolist (p my-packages)
-  (package-install p))
+
+;; (dolist (p my-packages)
+;;   (package-install p))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; my preferences
 
 (load-theme 'zenburn t)
+;; (load-theme 'solarized-light t)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -61,6 +68,9 @@
 
 ;; delete the selected region on typing
 (delete-selection-mode 1)
+
+;; remove trailing whitespaces on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; expand-region
@@ -190,7 +200,7 @@ about what flexible matching means in this context."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("dd4db38519d2ad7eb9e2f30bc03fba61a7af49a185edfd44e020aa5345e3dca7" "30fe7e72186c728bd7c3e1b8d67bc10b846119c45a0f35c972ed427c45bacc19" default))))
+ '(custom-safe-themes (quote ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "dd4db38519d2ad7eb9e2f30bc03fba61a7af49a185edfd44e020aa5345e3dca7" "30fe7e72186c728bd7c3e1b8d67bc10b846119c45a0f35c972ed427c45bacc19" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
