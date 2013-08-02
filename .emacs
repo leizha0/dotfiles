@@ -72,6 +72,10 @@
 ;; remove trailing whitespaces on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; linux style c-indent
+(setq c-default-style "linux"
+      c-basic-offset 2)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; expand-region
 (require 'expand-region)
@@ -84,6 +88,9 @@
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode t)
+
+;; disable search
+(setq ido-auto-merge-delay-time 9)
 
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
