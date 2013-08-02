@@ -219,18 +219,10 @@ about what flexible matching means in this context."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; facebook stuff
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(indent-tabs-mode nil)
- '(c-basic-offset 2))
-
-(defvar master-dir (getenv "ADMIN_SCRIPTS"))
-(load-library (concat master-dir "/master.emacs"))
-
-(setq hack-for-hiphop-root "~/www")
-(load "/home/engshare/tools/hack-for-hiphop")
+(let (master-dir (getenv "ADMIN_SCRIPTS"))
+  (when master-dir
+    (load-library (concat master-dir "/master.emacs"))
+    (setq hack-for-hiphop-root "~/www")
+    (load "/home/engshare/tools/hack-for-hiphop")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
