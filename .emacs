@@ -28,7 +28,7 @@
 (setq line-number-mode t)
 (setq column-number-mode t)
 (fset 'yes-or-no-p 'y-or-n-p)
-;; (setq visible-bell t)
+(setq ring-bell-function 'ignore)
 (setq inhibit-splash-screen t)
 
 ;; use spaces instead of tabs
@@ -37,8 +37,9 @@
 (setq scroll-preserve-screen-position t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; disable backup files
+;; disable backup files and auto save
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 
 ;; remember last edit position
 (setq save-place-file "~/.emacs.d/saveplace")
