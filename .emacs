@@ -55,13 +55,16 @@
 ;; (ac-set-trigger-key "TAB")
 ;; (ac-set-trigger-key "<tab>")
 
-(setq vc-handled-backends nil)
+;; (setq vc-handled-backends nil)
 
 (global-set-key (kbd "<home>") 'move-beginning-of-line)
 (global-set-key (kbd "<end>") 'move-end-of-line)
 
 (global-set-key (kbd "M-`") 'other-window)
 (global-set-key (kbd "C-x /") 'comment-or-uncomment-region)
+
+(global-set-key (kbd "M-[") 'backward-word)
+(global-set-key (kbd "M-]") 'forward-word)
 
 ;; go to last change
 (require 'goto-last-change)
@@ -220,7 +223,7 @@ about what flexible matching means in this context."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; facebook stuff
 
-(let (master-dir (getenv "ADMIN_SCRIPTS"))
+(let ((master-dir (getenv "ADMIN_SCRIPTS")))
   (when master-dir
     (load-library (concat master-dir "/master.emacs"))
     (setq hack-for-hiphop-root "~/www")
