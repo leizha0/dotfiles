@@ -102,7 +102,7 @@
 ;; font and color
 (set-cursor-color "#ffff00")
 (set-face-attribute 'default nil :height 200)
-(set-default-font "Monaco")
+;; (set-default-font "Monaco")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; hippie-expand
