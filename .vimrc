@@ -3,7 +3,7 @@ execute pathogen#infect()
 " This is especially nice with vim-powerline, which gives clear visual
 " indication of the current mode.
 " http://www.johnhawthorn.com/2012/09/vi-escape-delays/
-set timeoutlen=10 ttimeoutlen=0
+set timeoutlen=0 ttimeoutlen=0
 
 " URL: http://vim.wikia.com/wiki/Example_vimrc
 " Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
@@ -167,7 +167,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 
 " solarized dark
-set background=dark
+" set background=dark
 colorscheme solarized
 
 " airline
@@ -190,4 +190,6 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+
+set cursorline
 
